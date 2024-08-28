@@ -1,6 +1,6 @@
 package com.zyc.service.core.service;
 
-import com.zyc.service.core.entity.UserLoginRecord;
+import com.zyc.service.core.pojo.entity.UserLoginRecord;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**

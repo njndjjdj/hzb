@@ -1,6 +1,6 @@
 package com.zyc.service.core.service.impl;
 
-import com.zyc.service.core.entity.UserAccount;
+import com.zyc.service.core.pojo.entity.UserAccount;
 import com.zyc.service.core.mapper.UserAccountMapper;
 import com.zyc.service.core.service.IUserAccountService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;

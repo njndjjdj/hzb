@@ -1,7 +1,11 @@
 package com.zyc.service.core.service;
 
-import com.zyc.service.core.entity.Dict;
+import com.zyc.service.core.pojo.dto.ExcelDictDTO;
+import com.zyc.service.core.pojo.entity.Dict;
 import com.baomidou.mybatisplus.extension.service.IService;
+import org.springframework.web.multipart.MultipartFile;
+
+import java.util.List;
 
 /**
  * <p>
@@ -13,4 +17,18 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface IDictService extends IService<Dict> {
 
+    /**
+     * 文件上传
+     * @param file
+     */
+    void upload(MultipartFile file);
+
+    List<ExcelDictDTO> listDictData();
+
+    /**
+     * 根据父节点id查找子节点
+     * @param pid
+     * @return
+     */
+    List<ExcelDictDTO> listByParentId(Integer pid);
 }

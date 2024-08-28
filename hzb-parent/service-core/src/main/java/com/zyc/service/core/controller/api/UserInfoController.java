@@ -1,7 +1,7 @@
 package com.zyc.service.core.controller.api;
 
 import com.zyc.common.result.R;
-import com.zyc.service.core.entity.UserInfo;
+import com.zyc.service.core.pojo.entity.UserInfo;
 import com.zyc.service.core.service.IUserInfoService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;

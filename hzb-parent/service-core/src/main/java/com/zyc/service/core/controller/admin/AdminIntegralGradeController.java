@@ -1,14 +1,13 @@
 package com.zyc.service.core.controller.admin;
 
 import com.zyc.common.result.R;
-import com.zyc.service.core.entity.IntegralGrade;
+import com.zyc.service.core.pojo.entity.IntegralGrade;
 import com.zyc.service.core.service.IIntegralGradeService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
-import java.util.List;
 
 /**
  * 作者:ZYC

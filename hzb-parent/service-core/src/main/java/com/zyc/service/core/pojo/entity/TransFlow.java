@@ -1,4 +1,4 @@
-package com.zyc.service.core.entity;
+package com.zyc.service.core.pojo.entity;
 
 import java.math.BigDecimal;
 
@@ -14,7 +14,7 @@ import lombok.experimental.Accessors;
 
 /**
  * <p>
- * 积分等级表
+ * 交易流水表
  * </p>
  *
  * @author ZYC帅哥
@@ -23,9 +23,9 @@ import lombok.experimental.Accessors;
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
-@TableName("integral_grade")
-@ApiModel(value="IntegralGrade对象", description="积分等级表")
-public class IntegralGrade implements Serializable {
+@TableName("trans_flow")
+@ApiModel(value="TransFlow对象", description="交易流水表")
+public class TransFlow implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -33,17 +33,33 @@ public class IntegralGrade implements Serializable {
     @TableId(value = "id", type = IdType.AUTO)
     private Long id;
 
-    @ApiModelProperty(value = "积分区间开始")
-    @TableField("integral_start")
-    private Integer integralStart;
+    @ApiModelProperty(value = "用户id")
+    @TableField("user_id")
+    private Long userId;
 
-    @ApiModelProperty(value = "积分区间结束")
-    @TableField("integral_end")
-    private Integer integralEnd;
+    @ApiModelProperty(value = "用户名称")
+    @TableField("user_name")
+    private String userName;
 
-    @ApiModelProperty(value = "借款额度")
-    @TableField("borrow_amount")
-    private BigDecimal borrowAmount;
+    @ApiModelProperty(value = "交易单号")
+    @TableField("trans_no")
+    private String transNo;
+
+    @ApiModelProperty(value = "交易类型（1：充值 2：提现 3：投标 4：投资回款 ...）")
+    @TableField("trans_type")
+    private Integer transType;
+
+    @ApiModelProperty(value = "交易类型名称")
+    @TableField("trans_type_name")
+    private String transTypeName;
+
+    @ApiModelProperty(value = "交易金额")
+    @TableField("trans_amount")
+    private BigDecimal transAmount;
+
+    @ApiModelProperty(value = "备注")
+    @TableField("memo")
+    private String memo;
 
     @ApiModelProperty(value = "创建时间")
     @TableField("create_time")

@@ -1,6 +1,6 @@
 package com.zyc.service.core.service.impl;
 
-import com.zyc.service.core.entity.LendReturn;
+import com.zyc.service.core.pojo.entity.LendReturn;
 import com.zyc.service.core.mapper.LendReturnMapper;
 import com.zyc.service.core.service.ILendReturnService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;

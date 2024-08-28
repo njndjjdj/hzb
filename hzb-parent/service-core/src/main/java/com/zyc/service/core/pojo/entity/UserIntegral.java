@@ -1,4 +1,4 @@
-package com.zyc.service.core.entity;
+package com.zyc.service.core.pojo.entity;
 
 import com.baomidou.mybatisplus.annotation.*;
 
@@ -12,7 +12,7 @@ import lombok.experimental.Accessors;
 
 /**
  * <p>
- * 借款人上传资源表
+ * 用户积分记录表
  * </p>
  *
  * @author ZYC帅哥
@@ -21,9 +21,9 @@ import lombok.experimental.Accessors;
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
-@TableName("borrower_attach")
-@ApiModel(value="BorrowerAttach对象", description="借款人上传资源表")
-public class BorrowerAttach implements Serializable {
+@TableName("user_integral")
+@ApiModel(value="UserIntegral对象", description="用户积分记录表")
+public class UserIntegral implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -31,21 +31,17 @@ public class BorrowerAttach implements Serializable {
     @TableId(value = "id", type = IdType.AUTO)
     private Long id;
 
-    @ApiModelProperty(value = "借款人id")
-    @TableField("borrower_id")
-    private Long borrowerId;
+    @ApiModelProperty(value = "用户id")
+    @TableField("user_id")
+    private Long userId;
 
-    @ApiModelProperty(value = "图片类型（idCard1：身份证正面，idCard2：身份证反面，house：房产证，car：车）")
-    @TableField("image_type")
-    private String imageType;
+    @ApiModelProperty(value = "积分")
+    @TableField("integral")
+    private Integer integral;
 
-    @ApiModelProperty(value = "图片路径")
-    @TableField("image_url")
-    private String imageUrl;
-
-    @ApiModelProperty(value = "图片名称")
-    @TableField("image_name")
-    private String imageName;
+    @ApiModelProperty(value = "获取积分说明")
+    @TableField("content")
+    private String content;
 
     @ApiModelProperty(value = "创建时间")
     @TableField("create_time")

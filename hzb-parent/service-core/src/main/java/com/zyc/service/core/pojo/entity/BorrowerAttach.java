@@ -1,4 +1,4 @@
-package com.zyc.service.core.entity;
+package com.zyc.service.core.pojo.entity;
 
 import com.baomidou.mybatisplus.annotation.*;
 
@@ -12,7 +12,7 @@ import lombok.experimental.Accessors;
 
 /**
  * <p>
- * 数据字典
+ * 借款人上传资源表
  * </p>
  *
  * @author ZYC帅哥
@@ -21,31 +21,31 @@ import lombok.experimental.Accessors;
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
-@TableName("dict")
-@ApiModel(value="Dict对象", description="数据字典")
-public class Dict implements Serializable {
+@TableName("borrower_attach")
+@ApiModel(value="BorrowerAttach对象", description="借款人上传资源表")
+public class BorrowerAttach implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    @ApiModelProperty(value = "id")
+    @ApiModelProperty(value = "编号")
     @TableId(value = "id", type = IdType.AUTO)
     private Long id;
 
-    @ApiModelProperty(value = "上级id")
-    @TableField("parent_id")
-    private Long parentId;
+    @ApiModelProperty(value = "借款人id")
+    @TableField("borrower_id")
+    private Long borrowerId;
 
-    @ApiModelProperty(value = "名称")
-    @TableField("name")
-    private String name;
+    @ApiModelProperty(value = "图片类型（idCard1：身份证正面，idCard2：身份证反面，house：房产证，car：车）")
+    @TableField("image_type")
+    private String imageType;
 
-    @ApiModelProperty(value = "值")
-    @TableField("value")
-    private Integer value;
+    @ApiModelProperty(value = "图片路径")
+    @TableField("image_url")
+    private String imageUrl;
 
-    @ApiModelProperty(value = "编码")
-    @TableField("dict_code")
-    private String dictCode;
+    @ApiModelProperty(value = "图片名称")
+    @TableField("image_name")
+    private String imageName;
 
     @ApiModelProperty(value = "创建时间")
     @TableField("create_time")
@@ -55,7 +55,7 @@ public class Dict implements Serializable {
     @TableField("update_time")
     private LocalDateTime updateTime;
 
-    @ApiModelProperty(value = "删除标记（0:不可用 1:可用）")
+    @ApiModelProperty(value = "逻辑删除(1:已删除，0:未删除)")
     @TableField("is_deleted")
     @TableLogic
     private Boolean isDeleted;

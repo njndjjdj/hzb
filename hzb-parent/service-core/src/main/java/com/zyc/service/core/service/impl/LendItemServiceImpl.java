@@ -1,6 +1,6 @@
 package com.zyc.service.core.service.impl;
 
-import com.zyc.service.core.entity.LendItem;
+import com.zyc.service.core.pojo.entity.LendItem;
 import com.zyc.service.core.mapper.LendItemMapper;
 import com.zyc.service.core.service.ILendItemService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;

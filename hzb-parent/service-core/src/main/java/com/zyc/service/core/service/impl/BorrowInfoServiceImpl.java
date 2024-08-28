@@ -1,6 +1,6 @@
 package com.zyc.service.core.service.impl;
 
-import com.zyc.service.core.entity.BorrowInfo;
+import com.zyc.service.core.pojo.entity.BorrowInfo;
 import com.zyc.service.core.mapper.BorrowInfoMapper;
 import com.zyc.service.core.service.IBorrowInfoService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;

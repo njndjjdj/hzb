@@ -1,4 +1,4 @@
-package com.zyc.service.core.entity;
+package com.zyc.service.core.pojo.entity;
 
 import com.baomidou.mybatisplus.annotation.*;
 

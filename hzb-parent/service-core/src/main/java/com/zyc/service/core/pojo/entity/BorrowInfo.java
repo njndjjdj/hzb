@@ -1,4 +1,4 @@
-package com.zyc.service.core.entity;
+package com.zyc.service.core.pojo.entity;
 
 import java.math.BigDecimal;
 
@@ -14,7 +14,7 @@ import lombok.experimental.Accessors;
 
 /**
  * <p>
- * 交易流水表
+ * 借款信息表
  * </p>
  *
  * @author ZYC帅哥
@@ -23,9 +23,9 @@ import lombok.experimental.Accessors;
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
-@TableName("trans_flow")
-@ApiModel(value="TransFlow对象", description="交易流水表")
-public class TransFlow implements Serializable {
+@TableName("borrow_info")
+@ApiModel(value="BorrowInfo对象", description="借款信息表")
+public class BorrowInfo implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -33,33 +33,33 @@ public class TransFlow implements Serializable {
     @TableId(value = "id", type = IdType.AUTO)
     private Long id;
 
-    @ApiModelProperty(value = "用户id")
+    @ApiModelProperty(value = "借款用户id")
     @TableField("user_id")
     private Long userId;
 
-    @ApiModelProperty(value = "用户名称")
-    @TableField("user_name")
-    private String userName;
+    @ApiModelProperty(value = "借款金额")
+    @TableField("amount")
+    private BigDecimal amount;
 
-    @ApiModelProperty(value = "交易单号")
-    @TableField("trans_no")
-    private String transNo;
+    @ApiModelProperty(value = "借款期限")
+    @TableField("period")
+    private Integer period;
 
-    @ApiModelProperty(value = "交易类型（1：充值 2：提现 3：投标 4：投资回款 ...）")
-    @TableField("trans_type")
-    private Integer transType;
+    @ApiModelProperty(value = "年化利率")
+    @TableField("borrow_year_rate")
+    private BigDecimal borrowYearRate;
 
-    @ApiModelProperty(value = "交易类型名称")
-    @TableField("trans_type_name")
-    private String transTypeName;
+    @ApiModelProperty(value = "还款方式 1-等额本息 2-等额本金 3-每月还息一次还本 4-一次还本")
+    @TableField("return_method")
+    private Integer returnMethod;
 
-    @ApiModelProperty(value = "交易金额")
-    @TableField("trans_amount")
-    private BigDecimal transAmount;
+    @ApiModelProperty(value = "资金用途")
+    @TableField("money_use")
+    private Integer moneyUse;
 
-    @ApiModelProperty(value = "备注")
-    @TableField("memo")
-    private String memo;
+    @ApiModelProperty(value = "状态（0：未提交，1：审核中， 2：审核通过， -1：审核不通过）")
+    @TableField("status")
+    private Integer status;
 
     @ApiModelProperty(value = "创建时间")
     @TableField("create_time")

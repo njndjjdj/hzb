@@ -1,6 +1,6 @@
 package com.zyc.service.core.mapper;
 
-import com.zyc.service.core.entity.LendReturn;
+import com.zyc.service.core.pojo.entity.LendReturn;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**

@@ -1,6 +1,6 @@
 package com.zyc.service.core.service.impl;
 
-import com.zyc.service.core.entity.IntegralGrade;
+import com.zyc.service.core.pojo.entity.IntegralGrade;
 import com.zyc.service.core.mapper.IntegralGradeMapper;
 import com.zyc.service.core.service.IIntegralGradeService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;

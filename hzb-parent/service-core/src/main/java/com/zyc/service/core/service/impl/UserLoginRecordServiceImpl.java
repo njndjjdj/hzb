@@ -1,6 +1,6 @@
 package com.zyc.service.core.service.impl;
 
-import com.zyc.service.core.entity.UserLoginRecord;
+import com.zyc.service.core.pojo.entity.UserLoginRecord;
 import com.zyc.service.core.mapper.UserLoginRecordMapper;
 import com.zyc.service.core.service.IUserLoginRecordService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;

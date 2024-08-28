@@ -1,6 +1,6 @@
 package com.zyc.service.core.service.impl;
 
-import com.zyc.service.core.entity.BorrowerAttach;
+import com.zyc.service.core.pojo.entity.BorrowerAttach;
 import com.zyc.service.core.mapper.BorrowerAttachMapper;
 import com.zyc.service.core.service.IBorrowerAttachService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;

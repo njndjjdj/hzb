@@ -1,6 +1,6 @@
 package com.zyc.service.core.service.impl;
 
-import com.zyc.service.core.entity.TransFlow;
+import com.zyc.service.core.pojo.entity.TransFlow;
 import com.zyc.service.core.mapper.TransFlowMapper;
 import com.zyc.service.core.service.ITransFlowService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;

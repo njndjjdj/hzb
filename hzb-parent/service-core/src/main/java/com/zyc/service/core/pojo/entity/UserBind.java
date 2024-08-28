@@ -1,6 +1,4 @@
-package com.zyc.service.core.entity;
-
-import java.math.BigDecimal;
+package com.zyc.service.core.pojo.entity;
 
 import com.baomidou.mybatisplus.annotation.*;
 
@@ -14,7 +12,7 @@ import lombok.experimental.Accessors;
 
 /**
  * <p>
- * 借款信息表
+ * 用户绑定表
  * </p>
  *
  * @author ZYC帅哥
@@ -23,9 +21,9 @@ import lombok.experimental.Accessors;
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
-@TableName("borrow_info")
-@ApiModel(value="BorrowInfo对象", description="借款信息表")
-public class BorrowInfo implements Serializable {
+@TableName("user_bind")
+@ApiModel(value="UserBind对象", description="用户绑定表")
+public class UserBind implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -33,31 +31,35 @@ public class BorrowInfo implements Serializable {
     @TableId(value = "id", type = IdType.AUTO)
     private Long id;
 
-    @ApiModelProperty(value = "借款用户id")
+    @ApiModelProperty(value = "用户id")
     @TableField("user_id")
     private Long userId;
 
-    @ApiModelProperty(value = "借款金额")
-    @TableField("amount")
-    private BigDecimal amount;
+    @ApiModelProperty(value = "用户姓名")
+    @TableField("name")
+    private String name;
 
-    @ApiModelProperty(value = "借款期限")
-    @TableField("period")
-    private Integer period;
+    @ApiModelProperty(value = "身份证号")
+    @TableField("id_card")
+    private String idCard;
 
-    @ApiModelProperty(value = "年化利率")
-    @TableField("borrow_year_rate")
-    private BigDecimal borrowYearRate;
+    @ApiModelProperty(value = "银行卡号")
+    @TableField("bank_no")
+    private String bankNo;
 
-    @ApiModelProperty(value = "还款方式 1-等额本息 2-等额本金 3-每月还息一次还本 4-一次还本")
-    @TableField("return_method")
-    private Integer returnMethod;
+    @ApiModelProperty(value = "银行类型")
+    @TableField("bank_type")
+    private String bankType;
 
-    @ApiModelProperty(value = "资金用途")
-    @TableField("money_use")
-    private Integer moneyUse;
+    @ApiModelProperty(value = "手机号")
+    @TableField("mobile")
+    private String mobile;
 
-    @ApiModelProperty(value = "状态（0：未提交，1：审核中， 2：审核通过， -1：审核不通过）")
+    @ApiModelProperty(value = "绑定账户协议号")
+    @TableField("bind_code")
+    private String bindCode;
+
+    @ApiModelProperty(value = "状态")
     @TableField("status")
     private Integer status;
 
